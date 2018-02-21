@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Intents
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        INPreferences.requestSiriAuthorization{ (status) in
+            if status == INSiriAuthorizationStatus.authorized {
+                print("We can use Siri!")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

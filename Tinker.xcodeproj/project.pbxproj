@@ -12,7 +12,33 @@
 		F50BF0F4203DABAA00FA7AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50BF0F2203DABAA00FA7AC9 /* Main.storyboard */; };
 		F50BF0F6203DABAA00FA7AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50BF0F5203DABAA00FA7AC9 /* Assets.xcassets */; };
 		F50BF0F9203DABAA00FA7AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50BF0F7203DABAA00FA7AC9 /* LaunchScreen.storyboard */; };
+		F50BF107203DAE1100FA7AC9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF106203DAE1100FA7AC9 /* IntentHandler.swift */; };
+		F50BF10B203DAE1100FA7AC9 /* Tinkerintents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F50BF104203DAE1100FA7AC9 /* Tinkerintents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F50BF109203DAE1100FA7AC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F50BF0E3203DABAA00FA7AC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F50BF103203DAE1100FA7AC9;
+			remoteInfo = Tinkerintents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F50BF10F203DAE1100FA7AC9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F50BF10B203DAE1100FA7AC9 /* Tinkerintents.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F50BF0EB203DABAA00FA7AC9 /* Tinker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +48,21 @@
 		F50BF0F5203DABAA00FA7AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50BF0F8203DABAA00FA7AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F50BF0FA203DABAA00FA7AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50BF104203DAE1100FA7AC9 /* Tinkerintents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Tinkerintents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50BF106203DAE1100FA7AC9 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		F50BF108203DAE1100FA7AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50BF110203DAE9200FA7AC9 /* Tinker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tinker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F50BF0E8203DABAA00FA7AC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50BF101203DAE1100FA7AC9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				F50BF0ED203DABAA00FA7AC9 /* Tinker */,
+				F50BF105203DAE1100FA7AC9 /* Tinkerintents */,
 				F50BF0EC203DABAA00FA7AC9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				F50BF0EB203DABAA00FA7AC9 /* Tinker.app */,
+				F50BF104203DAE1100FA7AC9 /* Tinkerintents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +93,7 @@
 		F50BF0ED203DABAA00FA7AC9 /* Tinker */ = {
 			isa = PBXGroup;
 			children = (
+				F50BF110203DAE9200FA7AC9 /* Tinker.entitlements */,
 				F50BF0EE203DABAA00FA7AC9 /* AppDelegate.swift */,
 				F50BF0F0203DABAA00FA7AC9 /* ViewController.swift */,
 				F50BF0F2203DABAA00FA7AC9 /* Main.storyboard */,
@@ -62,6 +102,15 @@
 				F50BF0FA203DABAA00FA7AC9 /* Info.plist */,
 			);
 			path = Tinker;
+			sourceTree = "<group>";
+		};
+		F50BF105203DAE1100FA7AC9 /* Tinkerintents */ = {
+			isa = PBXGroup;
+			children = (
+				F50BF106203DAE1100FA7AC9 /* IntentHandler.swift */,
+				F50BF108203DAE1100FA7AC9 /* Info.plist */,
+			);
+			path = Tinkerintents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +123,34 @@
 				F50BF0E7203DABAA00FA7AC9 /* Sources */,
 				F50BF0E8203DABAA00FA7AC9 /* Frameworks */,
 				F50BF0E9203DABAA00FA7AC9 /* Resources */,
+				F50BF10F203DAE1100FA7AC9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F50BF10A203DAE1100FA7AC9 /* PBXTargetDependency */,
 			);
 			name = Tinker;
 			productName = Tinker;
 			productReference = F50BF0EB203DABAA00FA7AC9 /* Tinker.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F50BF103203DAE1100FA7AC9 /* Tinkerintents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F50BF10C203DAE1100FA7AC9 /* Build configuration list for PBXNativeTarget "Tinkerintents" */;
+			buildPhases = (
+				F50BF100203DAE1100FA7AC9 /* Sources */,
+				F50BF101203DAE1100FA7AC9 /* Frameworks */,
+				F50BF102203DAE1100FA7AC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tinkerintents;
+			productName = Tinkerintents;
+			productReference = F50BF104203DAE1100FA7AC9 /* Tinkerintents.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +163,15 @@
 				ORGANIZATIONNAME = "Bill Proudfoot";
 				TargetAttributes = {
 					F50BF0EA203DABAA00FA7AC9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					F50BF103203DAE1100FA7AC9 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -114,6 +191,7 @@
 			projectRoot = "";
 			targets = (
 				F50BF0EA203DABAA00FA7AC9 /* Tinker */,
+				F50BF103203DAE1100FA7AC9 /* Tinkerintents */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +207,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F50BF102203DAE1100FA7AC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,7 +226,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F50BF100203DAE1100FA7AC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50BF107203DAE1100FA7AC9 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F50BF10A203DAE1100FA7AC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F50BF103203DAE1100FA7AC9 /* Tinkerintents */;
+			targetProxy = F50BF109203DAE1100FA7AC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F50BF0F2203DABAA00FA7AC9 /* Main.storyboard */ = {
@@ -273,7 +374,9 @@
 		F50BF0FE203DABAA00FA7AC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tinker/Tinker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8539ME5Z8R;
 				INFOPLIST_FILE = Tinker/Info.plist;
@@ -288,13 +391,45 @@
 		F50BF0FF203DABAA00FA7AC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tinker/Tinker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8539ME5Z8R;
 				INFOPLIST_FILE = Tinker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BillProudfoot.Tinker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F50BF10D203DAE1100FA7AC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8539ME5Z8R;
+				INFOPLIST_FILE = Tinkerintents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BillProudfoot.Tinker.Tinkerintents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F50BF10E203DAE1100FA7AC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8539ME5Z8R;
+				INFOPLIST_FILE = Tinkerintents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BillProudfoot.Tinker.Tinkerintents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +452,15 @@
 			buildConfigurations = (
 				F50BF0FE203DABAA00FA7AC9 /* Debug */,
 				F50BF0FF203DABAA00FA7AC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F50BF10C203DAE1100FA7AC9 /* Build configuration list for PBXNativeTarget "Tinkerintents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50BF10D203DAE1100FA7AC9 /* Debug */,
+				F50BF10E203DAE1100FA7AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
